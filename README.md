@@ -1,6 +1,5 @@
 # Budgetsaver
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.3.
+Effective all-in-one resource for creating a budget, tracking your spending and getting smart about your money.
 
 ## Development server
 
