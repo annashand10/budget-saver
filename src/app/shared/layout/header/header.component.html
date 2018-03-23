@@ -2,7 +2,7 @@
   <mat-toolbar-row>
     <button mat-button [matMenuTriggerFor]="menu">My Budget</button>
     <mat-menu #menu="matMenu">
-      <button mat-menu-item (click)="redirect('new-budget-panel')">New budget</button>
+      <button mat-menu-item (click)="redirect('new-budget-form')">New budget</button>
       <button mat-menu-item (click)="redirect('my-budget')">Open Budget</button>
       <button mat-menu-item (click)="redirect('my-budget/:id')">Budget Settings</button>
     </mat-menu>

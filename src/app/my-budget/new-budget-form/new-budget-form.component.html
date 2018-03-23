@@ -1,0 +1,46 @@
+<div class="new-budget-form">
+  <div class="example-container">
+    <mat-label>New Budget Form</mat-label>
+    <form class="example-container" [formGroup]="options">
+      <mat-checkbox formControlName="hideRequired">Hide required marker</mat-checkbox>
+      <div>
+        <label>Float label: </label>
+        <mat-radio-group formControlName="floatLabel">
+          <mat-radio-button value="auto">Auto</mat-radio-button>
+          <mat-radio-button value="always">Always</mat-radio-button>
+          <mat-radio-button value="never">Never</mat-radio-button>
+        </mat-radio-group>
+      </div>
+    </form>
+
+    <mat-form-field
+      [hideRequiredMarker]="options.value.hideRequired"
+      [floatLabel]="options.value.floatLabel">
+      <input matInput placeholder="Budget Label" required>
+    </mat-form-field>
+
+    <!--<mat-form-field [floatLabel]="options.value.floatLabel">-->
+    <!--<mat-label>Both a label and a placeholder</mat-label>-->
+    <!--<input matInput placeholder="Simple placeholder">-->
+    <!--</mat-form-field>-->
+
+    <mat-form-field
+      [hideRequiredMarker]="options.value.hideRequired"
+      [floatLabel]="options.value.floatLabel">
+      <mat-select required>
+        <mat-option>-- None --</mat-option>
+        <mat-option value="option1">($)Dollars</mat-option>
+        <mat-option value="option2">(€)Euro</mat-option>
+      </mat-select>
+      <mat-placeholder>
+        <mat-icon>favorite</mat-icon>
+        <b> Castom</b> <i> Currency</i></mat-placeholder>
+    </mat-form-field>
+
+    <mat-form-field>
+  <textarea matInput placeholder="Saving Plan" matTextareaAutosize matAutosizeMinRows="2"
+            matAutosizeMaxRows="5"></textarea>
+    </mat-form-field>
+    <button mat-raised-button class="submit" type="submit">Add!</button>
+  </div>
+</div>

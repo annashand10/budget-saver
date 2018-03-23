@@ -11,6 +11,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import {AppRoutingRoutingModule} from "./app-routing.module";
 import {MaterialModule} from "./material/material.module";
 import {HeaderComponent} from "./shared/layout/header/header.component";
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   imports: [
@@ -21,7 +22,9 @@ import {HeaderComponent} from "./shared/layout/header/header.component";
     ReportsModule,
     AppRoutingRoutingModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   declarations: [
