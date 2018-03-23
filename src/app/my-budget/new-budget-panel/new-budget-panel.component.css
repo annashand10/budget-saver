@@ -1,0 +1,7 @@
+.new-budget-container {
+  background-image: url("../../../assets/new-budget-icon.png");
+  background-repeat: no-repeat;
+  height: 130px;
+  width: 130px;
+  /*background-position: <left|right>;*/
+}
