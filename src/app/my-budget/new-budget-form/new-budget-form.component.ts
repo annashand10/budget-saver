@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup} from "@angular/forms";
 
 @Component({
@@ -8,6 +8,7 @@ import {FormBuilder, FormGroup} from "@angular/forms";
 })
 export class NewBudgetFormComponent implements OnInit {
   options: FormGroup;
+  @Input() showNewForm: boolean;
 
   constructor(fb: FormBuilder) {
     this.options = fb.group({
@@ -17,6 +18,6 @@ export class NewBudgetFormComponent implements OnInit {
   }
 
   ngOnInit() {
+    console.log("new form");
   }
-
 }

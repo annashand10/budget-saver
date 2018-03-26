@@ -19,15 +19,10 @@
   margin: 0 5px;
 }
 
-.new-budget-form {
+.login-form {
   width: 400px;
   height: 400px;
   margin: 100px auto;
   border: 1px solid crimson;
   padding: 15px;
-  position: absolute;
-  top: 72px;
-  right: auto;
-  left: 500px;
-  background-color: ghostwhite;
 }

@@ -10,5 +10,6 @@ export class MyBudgetComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    console.log("MyBudgetComponent ");
   }
 }

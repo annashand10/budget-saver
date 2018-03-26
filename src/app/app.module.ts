@@ -1,36 +1,55 @@
-import {BrowserModule} from '@angular/platform-browser';
-import {NgModule} from '@angular/core';
+import {BrowserModule} from "@angular/platform-browser";
+import {NgModule} from "@angular/core";
 
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {AppComponent} from './app.component';
-import {AccountModule} from './account/account.module';
-import {AuthModule} from './auth/auth.module';
-import {MyBudgetModule} from './my-budget/my-budget.module';
-import {ReportsModule} from './reports/reports.module';
-import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import {AppComponent} from "./app.component";
+import {AccountModule} from "./account/account.module";
+import {MyBudgetModule} from "./my-budget/my-budget.module";
+import {ReportsModule} from "./reports/reports.module";
+import { PageNotFoundComponent } from "./page-not-found/page-not-found.component";
 import {AppRoutingRoutingModule} from "./app-routing.module";
 import {MaterialModule} from "./material/material.module";
 import {HeaderComponent} from "./shared/layout/header/header.component";
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import {AuthGuard} from "./auth-guard/auth-guard";
+import {MockBackend} from "@angular/http/testing";
+import {BaseRequestOptions, HttpModule} from "@angular/http";
+import {AuthenticationService} from "./services/auth.service";
+import {LoginComponent} from "./login/login.component";
+import {fakeBackendProvider} from "./helpers/fake-backend";
+import {TableModule} from "./components/table/table.module";
+import {DatepickerModule} from "./components/datepicker/datepicker.module";
 
 @NgModule({
   imports: [
     BrowserModule,
     AccountModule,
-    AuthModule,
     MyBudgetModule,
     ReportsModule,
     AppRoutingRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpModule,
+    TableModule,
+    DatepickerModule
   ],
-  providers: [],
+  providers: [
+    AuthGuard,
+    AuthenticationService,
+    // UserService,
+
+    // providers used to create fake backend
+    fakeBackendProvider,
+    MockBackend,
+    BaseRequestOptions
+  ],
   declarations: [
     AppComponent,
     PageNotFoundComponent,
-    HeaderComponent
+    HeaderComponent,
+    LoginComponent
   ],
   bootstrap: [AppComponent]
 })

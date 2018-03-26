@@ -7,6 +7,8 @@ import {MyBudgetRoutingModule} from "./my-budget-routing.module";
 import {NewBudgetFormComponent} from "./new-budget-form/new-budget-form.component";
 import {MaterialModule} from "../material/material.module";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {TableModule} from "../components/table/table.module";
+import {DatepickerModule} from "../components/datepicker/datepicker.module";
 
 @NgModule({
   imports: [
@@ -14,7 +16,9 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
     MyBudgetRoutingModule,
     MaterialModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    TableModule,
+    DatepickerModule
   ],
   declarations: [
     MyBudgetComponent,

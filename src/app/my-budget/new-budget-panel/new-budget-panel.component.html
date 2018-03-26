@@ -1,8 +1,22 @@
-<p>
-  new-budget-panel works!
-</p>
-<div class="create-new-budget-container">
-  <button mat-icon-button class="new-budget-container"><img></button>
-  <p>Create new budget</p>
-</div>
+<!--<p>-->
+  <!--new-budget-panel works!-->
+<!--</p>-->
+<!--<div class="create-new-budget-container">-->
 
+<!--</div>-->
+
+<mat-grid-list cols="4" rowHeight="1:1">
+  <mat-grid-tile *ngFor="let button of buttons">
+    <button mat-icon-button class="new-budget-container"><img>
+      {{button.label}}
+    </button>
+  </mat-grid-tile>
+
+  <mat-grid-tile>
+    <button mat-icon-button class="new-budget-container" (click)="toogleShowNewFrom()"><img>
+    {{newButtonLabel}}
+    </button>
+  </mat-grid-tile>
+</mat-grid-list>
+<app-new-budget-form [showNewForm]="newForm">
+</app-new-budget-form>

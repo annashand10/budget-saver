@@ -1,14 +1,12 @@
-<!--<ng-container matColumnDef="select">-->
-  <!--<mat-header-cell *matHeaderCellDef>-->
-    <!--<mat-checkbox (change)="$event ? masterToggle() : null"-->
-                  <!--[checked]="selection.hasValue() && isAllSelected()"-->
-                  <!--[indeterminate]="selection.hasValue() && !isAllSelected()">-->
-    <!--</mat-checkbox>-->
-  <!--</mat-header-cell>-->
-  <!--<mat-cell *matCellDef="let row">-->
-    <!--<mat-checkbox (click)="$event.stopPropagation()"-->
-                  <!--(change)="$event ? selection.toggle(row) : null"-->
-                  <!--[checked]="selection.isSelected(row)">-->
-    <!--</mat-checkbox>-->
-  <!--</mat-cell>-->
-<!--</ng-container>-->
+<div class="my-budget">
+  <div class="my-budget__label">
+    <mat-card-title>My budget label</mat-card-title>
+    <app-datepicker></app-datepicker>
+  </div>
+  <div class="my-budget__table">
+    <app-table></app-table>
+  </div>
+  <div class="my-budget__details">
+    <app-badget-details></app-badget-details>
+  </div>
+</div>

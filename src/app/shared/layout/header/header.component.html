@@ -2,12 +2,16 @@
   <mat-toolbar-row>
     <button mat-button [matMenuTriggerFor]="menu">My Budget</button>
     <mat-menu #menu="matMenu">
-      <button mat-menu-item (click)="redirect('new-budget-form')">New budget</button>
       <button mat-menu-item (click)="redirect('my-budget')">Open Budget</button>
+      <button mat-menu-item (click)="redirect('new-budget-form')">New budget</button>
+      <button mat-menu-item (click)="redirect('new-budget-panel')">Budgets panel</button>
       <button mat-menu-item (click)="redirect('my-budget/:id')">Budget Settings</button>
     </mat-menu>
     <span class="example-spacer"></span>
     <button mat-button (click)="redirect('reports')">Reports</button>
     <button mat-button (click)="redirect('account')">Account</button>
+    <div fxLayout="row" fxLayoutAlign="end">
+      <button mat-button (click)="redirect('login')" >Logout</button>
+    </div>
   </mat-toolbar-row>
 </mat-toolbar>

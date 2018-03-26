@@ -1,4 +1,6 @@
 import { NgModule } from '@angular/core';
+import { FlexLayoutModule } from '@angular/flex-layout';
+
 import {
   MatButtonModule,
   MatCheckboxModule,
@@ -32,6 +34,7 @@ import {
   MatStepperModule,
   MatTabsModule,
   MatTooltipModule,
+  MatFormFieldModule
 } from '@angular/material';
 
 @NgModule({
@@ -68,6 +71,8 @@ import {
     MatStepperModule,
     MatTabsModule,
     MatTooltipModule,
+    FlexLayoutModule,
+    MatFormFieldModule
   ],
   exports: [
     MatButtonModule,
@@ -102,6 +107,8 @@ import {
     MatStepperModule,
     MatTabsModule,
     MatTooltipModule,
+    FlexLayoutModule,
+    MatFormFieldModule
   ],
 })
 export class MaterialModule { }
