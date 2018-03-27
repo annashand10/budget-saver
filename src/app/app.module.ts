@@ -19,6 +19,8 @@ import {LoginComponent} from "./login/login.component";
 import {fakeBackendProvider} from "./helpers/fake-backend";
 import {TableModule} from "./components/table/table.module";
 import {DatepickerModule} from "./components/datepicker/datepicker.module";
+import {BudgetService} from "./services/budget.service";
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   imports: [
@@ -33,11 +35,13 @@ import {DatepickerModule} from "./components/datepicker/datepicker.module";
     ReactiveFormsModule,
     HttpModule,
     TableModule,
-    DatepickerModule
+    DatepickerModule,
+    HttpClientModule
   ],
   providers: [
     AuthGuard,
     AuthenticationService,
+    BudgetService,
     // UserService,
 
     // providers used to create fake backend

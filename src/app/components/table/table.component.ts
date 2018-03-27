@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnChanges, OnInit, SimpleChanges} from '@angular/core';
 import {MatTableDataSource} from "@angular/material";
 import {SelectionModel} from "@angular/cdk/collections";
 
@@ -37,15 +37,28 @@ const ELEMENT_DATA: Element[] = [
   templateUrl: './table.component.html',
   styleUrls: ['./table.component.css']
 })
-export class TableComponent implements OnInit {
+export class TableComponent implements OnInit, OnChanges {
+
+  @Input() items;
 
   displayedColumns = ['select', 'position', 'name', 'weight', 'symbol'];
-  dataSource = new MatTableDataSource<Element>(ELEMENT_DATA);
+  dataSource: any;
   selection = new SelectionModel<Element>(true, []);
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  ngOnChanges(changes: SimpleChanges) {
+    const data = changes.items;
+    if (changes.items && changes.items.currentValue) {
+      this.dataSource = new MatTableDataSource<Element>(data.currentValue);
+    }
+
+    console.log('prev value: ', data.previousValue);
+    console.log('got name: ', data.currentValue);
+    console.log(changes);
   }
 
   /** Whether the number of selected elements matches the total number of rows. */

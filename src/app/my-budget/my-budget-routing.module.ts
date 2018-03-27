@@ -7,7 +7,7 @@ import {NewBudgetFormComponent} from "./new-budget-form/new-budget-form.componen
 
 const routes: Routes = [
   { path: 'my-budget',  component: MyBudgetComponent},
-  // { path: 'new-budget-form', component: NewBudgetFormComponent},
+  { path: 'new-budget-form', component: NewBudgetFormComponent},
   { path: 'my-budget/:id', component: BadgetDetailsComponent},
   { path: 'new-budget-panel', component: NewBudgetPanelComponent}
 ];

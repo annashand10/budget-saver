@@ -8,7 +8,6 @@ import {FormBuilder, FormGroup} from "@angular/forms";
 })
 export class NewBudgetFormComponent implements OnInit {
   options: FormGroup;
-  @Input() showNewForm: boolean;
 
   constructor(fb: FormBuilder) {
     this.options = fb.group({

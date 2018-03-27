@@ -1,10 +1,10 @@
 <div class="my-budget">
   <div class="my-budget__label">
-    <mat-card-title>My budget label</mat-card-title>
+    <mat-card-title>{{budgetLabel}}</mat-card-title>
     <app-datepicker></app-datepicker>
   </div>
   <div class="my-budget__table">
-    <app-table></app-table>
+    <app-table [items]="categories"></app-table>
   </div>
   <div class="my-budget__details">
     <app-badget-details></app-badget-details>
